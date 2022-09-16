@@ -26,4 +26,28 @@
   background-color: darkgray;
   color: white;
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: 
+    ". foot-a foot-a foot-a ."
+    ". foot-b foot-c foot-d .";
+  justify-content: center;
+  align-items: center;
+}
+
+.foot-a{
+  grid-area: foot-a;
+}
+
+.foot-b{
+  grid-area: foot-b;
+}
+
+.foot-c{
+  grid-area: foot-c;
+}
+
+.foot-d{
+  grid-area: foot-d; 
 }
