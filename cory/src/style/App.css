@@ -38,6 +38,11 @@
 
 .foot-a{
   grid-area: foot-a;
+  font-size: 2ch;
+}
+
+.connect{
+  
 }
 
 .foot-b{
