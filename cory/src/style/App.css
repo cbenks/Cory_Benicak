@@ -1,6 +1,12 @@
 
 /* nav */
 
+.nav{
+  padding: 60px;
+  text-align:center;
+  background-color: teal;
+}
+
 .nav-logo{
   width: 20%;
   border-radius: 20%;
