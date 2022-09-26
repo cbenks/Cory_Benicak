@@ -1,4 +1,10 @@
+import { Document } from 'react-pdf'
+
+
 const Resume = () => {
+Document
+
+
   return(
     <div>
       
