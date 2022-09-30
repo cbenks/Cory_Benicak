@@ -15,6 +15,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/" element={<AboutMe />} />
       </Routes>
+      <div className="space"></div>
       <footer>
         <Footer />
       </footer>

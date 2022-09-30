@@ -1,13 +1,21 @@
-import { Document } from 'react-pdf'
+import Pdf from '../Resume.pdf'
+import pic from '../images/resume.png'
+
 
 
 const Resume = () => {
-Document
 
+  const onResumeClick = () => {
+    window.open(Pdf)
+  }
 
   return(
-    <div>
-      
+    <div className="resume">
+      <h1>resume</h1>
+      <div className="res-cont" >
+        <div onClick={onResumeClick}><img className='resumepng' src={pic} alt="Corys Resume"/></div>
+        <p>Click to download.</p>
+      </div>
     </div>
   )
 }
