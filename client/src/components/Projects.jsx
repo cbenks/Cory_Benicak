@@ -24,7 +24,6 @@ const Projects = () => {
 
   return (
     <div>
-      <h3 className="myprojects">projects</h3>
       <div className="projects">
         <div className="projA" onClick={handleClickP1}>
           <img className="i a" src="https://i.imgur.com/gcD1B3R.png" alt="blackjack project"/>

@@ -11,10 +11,9 @@ const Resume = () => {
 
   return(
     <div className="resume">
-      <h1>resume</h1>
       <div className="res-cont" >
+      <p>Click below to download</p>
         <div onClick={onResumeClick}><img className='resumepng' src={pic} alt="Corys Resume"/></div>
-        <p>Click to download</p>
       </div>
     </div>
   )
