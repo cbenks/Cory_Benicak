@@ -60,6 +60,32 @@ nav{
   box-shadow: 12px 29px 81px 0px rgba(0,0,0,0.75);
 }
 
+.selfoverlay{
+  position: relative;
+}
+
+.selfoverlay:hover .overlay {
+  width: 100%;
+}
+
+.projAndResume{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr .5fr 1fr;
+  grid-template-areas:
+    "a"
+    "."
+    "b";
+}
+
+.p{
+  grid-area: a;
+}
+
+.r{
+  grid-area: b;
+}
+
 
 
 
@@ -77,11 +103,13 @@ nav{
   width: 100%;
   height: 40em;
   display:grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: .5fr 1fr .5fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr ;
   grid-template-areas: 
-    "p1 p2"
-    "p3 p4";
+    ". p1 ."
+    ". p2 ."
+    ". p3 ."
+    ". p4 .";
   margin-top: 15%;
 }
 
@@ -94,12 +122,20 @@ nav{
 
 .projA {
 grid-area: p1;
-text-align: center;
+grid-gap: 30px 0px;
+}
+.projA:hover .overlay {
+  width: 90%;
 }
 
 .projB {
 grid-area: p2;
 text-align: center;
+grid-gap: 30px 0px;
+}
+
+.projB:hover .overlay {
+  width: 90%;
 }
 
 .projC {
@@ -107,11 +143,42 @@ text-align: center;
   text-align: center;
 }
 
+.projC:hover .overlay {
+  width: 90%;
+}
+
 .projD {
   grid-area: p4;
   text-align: center;
 }
 
+.projD:hover .overlay {
+  width: 90%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: silver;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.overlayText{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
 
 
 
@@ -133,8 +200,36 @@ text-align: center;
 
 .res-cont {
   margin-bottom: 100px;
+  position: relative;
 }
 
+.res-cont:hover .resumeoverlay {
+  width: 100%;
+}
+
+.resumeoverlay{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.resumeoverlaytext {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
 
 
 
@@ -150,7 +245,7 @@ text-align: center;
   width: 100%;
   height: 15%;
   background-color: white;
-  opacity: .7;
+  opacity: .8;
   color: black;
   text-align: center;
   display: grid;
